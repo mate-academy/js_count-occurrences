@@ -19,17 +19,16 @@
  */
 
 function countOccurrences(phrase, letter) {
-  let p = phrase.toLowerCase();
-  let l = letter.toLowerCase();
-  let sum = 0;
-  for (let i = 0; i < l.length; i++) {
-    for (let k = 0; k < p.length; k++) {
-      if (l[i] === p[k]) {
-        sum++;
+  let phraseLower = phrase.toLowerCase();
+  let letterLower = letter.toLowerCase();
+  let count = 0;
+  for (let i = 0; i < letterLower.length; i++) {
+    for (let k = 0; k < phraseLower.length; k++) {
+      if (letterLower[i] === phraseLower[k]) {
+        count++;
       }
     }
   }
-  return sum;
+  return count;
 }
-console.log(countOccurrences('fD', 'asfasfdDS'));
 module.exports = countOccurrences;
