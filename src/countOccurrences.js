@@ -19,7 +19,17 @@
  */
 
 function countOccurrences(phrase, letter) {
-  // write code here
+  let p = phrase.toLowerCase();
+  let l = letter.toLowerCase();
+  let sum = 0;
+  for (let i = 0; i < l.length; i++) {
+    for (let k = 0; k < p.length; k++) {
+      if (l[i] === p[k]) {
+        sum++;
+      }
+    }
+  }
+  return sum;
 }
-
+console.log(countOccurrences('aD', 'asfasfdDS'));
 module.exports = countOccurrences;
