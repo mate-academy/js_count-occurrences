@@ -31,5 +31,5 @@ function countOccurrences(phrase, letter) {
   }
   return sum;
 }
-console.log(countOccurrences('aD', 'asfasfdDS'));
+console.log(countOccurrences('fD', 'asfasfdDS'));
 module.exports = countOccurrences;
