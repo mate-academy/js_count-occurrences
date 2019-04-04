@@ -19,7 +19,17 @@
  */
 
 function countOccurrences(phrase, letter) {
-  // write code here
+  let numberEntries = 0; // количество вхождений letter в phrase
+  let positionSimbol = 0;
+  letter = letter.toLowerCase(); // приводим все к нижнему  регистру
+  phrase = phrase.toLowerCase(); // приводим все к нижнему  регистру
+  while (true) {
+    let foundPos = phrase.indexOf(letter, positionSimbol); // место в нашем списке в котором найден letter
+    if (foundPos === -1) break;
+    positionSimbol = foundPos + 1;
+    numberEntries++;
+  }
+  return numberEntries;
 }
 
 module.exports = countOccurrences;
