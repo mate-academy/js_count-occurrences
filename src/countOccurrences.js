@@ -17,8 +17,17 @@
  * @return {number}
  *
  */
-function countOccurrences(phrase, letter) {
-  // write code here
+
+function countOccurrences(inputPhrase, letter) {
+  let phrase = inputPhrase.toLowerCase();
+  let quantity = 0;
+  let lastPos = -1;
+
+  while (phrase.indexOf(letter, lastPos + 1) !== -1) {
+    lastPos = phrase.indexOf(letter, lastPos + 1);
+    quantity++;
+  };
+  return quantity;
 }
 
 module.exports = countOccurrences;
