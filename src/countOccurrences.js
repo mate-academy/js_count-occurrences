@@ -22,7 +22,11 @@ function countOccurrences(phrase, letter) {
   phrase = phrase.toLowerCase();
   var quantity = 0;
   var lastPos = -1;
-  while ((lastPos = phrase.indexOf(letter, lastPos + 1)) !== -1) {
+  /* while ((lastPos = phrase.indexOf(letter, lastPos + 1)) !== -1) {
+    quantity++;
+  }; */
+  while (phrase.indexOf(letter, lastPos + 1) !== -1) {
+    lastPos = phrase.indexOf(letter, lastPos + 1);
     quantity++;
   };
   return quantity;
