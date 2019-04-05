@@ -19,7 +19,19 @@
  */
 
 function countOccurrences(phrase, letter) {
-  // write code here
+  const leterLowerCase = letter.charAt(0);
+  const leterUpperCase = letter.toUpperCase().charAt(0);
+  let numOfLeters = 0;
+
+  for (let i = 0; i < phrase.length; i++) {
+    const praseCharAt = phrase.charAt(i);
+
+    if (praseCharAt === leterLowerCase || praseCharAt === leterUpperCase) {
+      numOfLeters += 1;
+    }
+  }
+
+  return numOfLeters;
 }
 
 module.exports = countOccurrences;
