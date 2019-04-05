@@ -19,13 +19,12 @@
  */
 
 function countOccurrences(phrase, letter) {
-  let numberEntries = 0; // количество вхождений letter в phrase
+  let numberEntries = 0;
   let positionSimbol = 0;
   letter = letter.toLowerCase(); // приводим все к нижнему  регистру
   phrase = phrase.toLowerCase(); // приводим все к нижнему  регистру
-  while (true) {
+  while (phrase.indexOf(letter, positionSimbol) !== -1) {
     let foundPos = phrase.indexOf(letter, positionSimbol); // место в нашем списке в котором найден letter
-    if (foundPos === -1) break;
     positionSimbol = foundPos + 1;
     numberEntries++;
   }
