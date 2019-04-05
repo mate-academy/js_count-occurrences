@@ -3,7 +3,7 @@
 /**
  * Implement countOccurrences function:
  *
- * It takes a string and a letter and calculates the number of times
+ * It takes a phrase and a letter and calculates the number of times
  * the letter appears in the phrase. The function is case insensitive.
  *
  * countOccurrences('letter', 't') === 2
