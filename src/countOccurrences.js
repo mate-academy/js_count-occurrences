@@ -20,6 +20,12 @@
 
 function countOccurrences(phrase, letter) {
   // write code here
+  let numberOfLetter = '';
+  for (let i = 0; i < phrase.length; i++) {
+    if (phrase.charAt(i).toLowerCase() === letter) {
+      numberOfLetter += letter;
+    }
+  } return numberOfLetter.length;
 }
 
 module.exports = countOccurrences;
