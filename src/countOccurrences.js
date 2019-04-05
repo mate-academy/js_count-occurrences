@@ -1,5 +1,4 @@
 'use strict';
-
 /**
  * Implement countOccurrences function:
  *
@@ -18,7 +17,15 @@
  *
  */
 function countOccurrences(phrase, letter) {
-  // write code here
+  let ph = phrase.toLowerCase();
+  let le = letter.toLowerCase();
+  let count = 0;
+  let position = ph.indexOf(le);
+  while (position !== -1) {
+    count++;
+    position = ph.indexOf(le, position + 1);
+  }
+  return count;
 }
 
 module.exports = countOccurrences;
