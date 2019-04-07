@@ -21,6 +21,8 @@ function countOccurrences(phrase, letter) {
   let indexToCountFrom = 0;
   let count = 0;
 
+  letter.toLowerCase();
+  phrase.toLowerCase();
   do {
     indexToCountFrom = phrase.indexOf(letter, indexToCountFrom) + 1;
     if (indexToCountFrom) {
