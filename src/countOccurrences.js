@@ -23,9 +23,11 @@ function countOccurrences(phrase, letter) {
 
   do {
     indexToCountFrom = phrase.indexOf(letter, indexToCountFrom) + 1;
-    count++;
+    if (indexToCountFrom) {
+      count++;
+    }
   } while (indexToCountFrom);
-  return --count;
+  return count;
 }
 
 module.exports = countOccurrences;
