@@ -20,16 +20,8 @@
 function countOccurrences(phrase, letter) {
   let count = 0;
   for (let item of phrase) {
-    if (item.toUpperCase() === item) {
-      letter = letter.toUpperCase();
-      if (item === letter) {
-        count++;
-      }
-    } else if (item.toLowerCase() === item) {
-      letter = letter.toLowerCase();
-      if (item === letter) {
-        count++;
-      }
+    if (item.toLowerCase() === letter.toLowerCase()) {
+      count++;
     }
   }
   return count;
