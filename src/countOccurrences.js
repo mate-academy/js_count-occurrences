@@ -18,17 +18,17 @@
  *
  */
 function countOccurrences(phrase, letter) {
-  let indexToCountFrom = 0;
   let count = 0;
+  const letterLowered = letter.toLowerCase();
+  const phraseLowered = phrase.toLowerCase();
 
-  letter = letter.toLowerCase();
-  phrase = phrase.toLowerCase();
-  do {
-    indexToCountFrom = phrase.indexOf(letter, indexToCountFrom) + 1;
-    if (indexToCountFrom) {
-      count++;
+  for (let letterIndex = 0; letterIndex < phrase.length; letterIndex++) {
+    letterIndex = phraseLowered.indexOf(letterLowered, letterIndex);
+    if (letterIndex === -1) {
+      return count;
     }
-  } while (indexToCountFrom);
+    count++;
+  }
   return count;
 }
 
