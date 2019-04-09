@@ -19,7 +19,7 @@
  */
 function countOccurrences(phrase, letter) {
   var number = '';
-  phrase.toLowerCase();
+  phrase = phrase.toLowerCase();
   for (var i = 0; i < phrase.length; i++) {
     if (phrase.charAt(i) === letter) {
       number += letter;
