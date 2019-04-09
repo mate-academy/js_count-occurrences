@@ -18,12 +18,13 @@
  *
  */
 function countOccurrences(phrase, letter) {
-  var counter = '';
+  var number = '';
+  phrase.toLowerCase();
   for (var i = 0; i < phrase.length; i++) {
-    if (phrase.charAt(i).toLowerCase() === letter) {
-      counter += letter;
+    if (phrase.charAt(i) === letter) {
+      number += letter;
     }
-  } return counter.length;
+  } return number.length;
 }
 
 module.exports = countOccurrences;
