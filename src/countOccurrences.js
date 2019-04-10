@@ -18,11 +18,13 @@
  *
  */
 function countOccurrences(phrase, letter) {
+  let letterToLower = letter.toLowerCase();
+  let phraseToLower = phrase.toLowerCase();
   let counter = 0;
-  let sum = phrase.toLowerCase().indexOf(letter.toLowerCase());
+  let sum = phraseToLower.indexOf(letterToLower);
   while (sum >= 0) {
     counter++;
-    sum = phrase.indexOf(letter, sum + 1);
+    sum = phraseToLower.indexOf(letterToLower, sum + 1);
   }
   return counter;
 }
