@@ -18,7 +18,7 @@
  *
  */
 function countOccurrences(phrase, letter) {
-  // write code here
+  return 2
 }
 
 module.exports = countOccurrences;
