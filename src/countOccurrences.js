@@ -24,7 +24,7 @@ function countOccurrences(phrase, letter) {
   let count = 0;
 
   for (let i = 0; i < newPhrase.length; i++) {
-    if (newPhrase[i].toLocaleLowerCase() === letter.toLowerCase()) {
+    if (newPhrase[i].toLowerCase() === letter.toLowerCase()) {
       count++;
     };
   };
