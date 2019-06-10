@@ -23,8 +23,6 @@ function countOccurrences(phrase, letter) {
   for (let i = 0; i < str.length; i++) {
     if (str[i] === letter) {
       count++;
-    } else if (str.charAt(letter) === -1) {
-      return 0;
     }
   }
   return count;
