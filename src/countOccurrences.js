@@ -1,6 +1,6 @@
 'use strict';
 
-/**
+/*
  * Implement countOccurrences function:
  *
  * It takes a phrase and a letter and calculates the number of times
