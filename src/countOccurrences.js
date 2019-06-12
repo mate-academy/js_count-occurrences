@@ -26,6 +26,7 @@ function countOccurrences(phrase, letter) {
       count++;
     }
   }
+  return count;
 }
 
 module.exports = countOccurrences;
