@@ -25,18 +25,19 @@ function countOccurrences(phrase, letter) {
   if (typeof letter === 'string' && letter.length === 1) {
     letterToCount = letter.toLowerCase();
   } else {
-    console.log('It is not a letter');
+    return 'It is not a letter';
   }
 
   if (typeof phrase === 'string') {
-    basePhrase = phrase.toLocaleLowerCase();
+    basePhrase = phrase.toLocaleLowerCase().split('');
   } else {
-    console.log('It is not a string');
+    return 'It is not a string';
   }
 
-  while (basePhrase.indexOf(letterToCount) !== -1) {
-    countLetters += 1;
-    basePhrase = basePhrase.slice(basePhrase.indexOf(letterToCount) + 1);
+  for (let i = 0; i < basePhrase.length; i++) {
+    if (basePhrase[i] === letterToCount) {
+      countLetters += 1;
+    }
   }
   return countLetters;
 }
