@@ -18,7 +18,7 @@
  *
  */
 function countOccurrences(phrase, letter) {
-  // write code here
+  return phrase.indexOf(letter);
 }
 
 module.exports = countOccurrences;
