@@ -18,7 +18,18 @@
  *
  */
 function countOccurrences(phrase, letter) {
-  // write code here
+  const line = phrase.toLowerCase();
+  let position = 0;
+  let result = 0;
+  while (true) {
+    const foundPosition = line.indexOf(letter, position);
+    if (foundPosition === -1) {
+      break;
+    }
+    result += 1;
+    position = foundPosition + 1;
+  }
+  return result;
 }
 
 module.exports = countOccurrences;
