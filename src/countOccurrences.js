@@ -1,24 +1,20 @@
 'use strict';
 
-/**
- * Implement countOccurrences function:
- *
- * It takes a phrase and a letter and calculates the number of times
- * the letter appears in the phrase. The function is case insensitive.
- *
- * countOccurrences('letter', 't') === 2
- * countOccurrences('abc', 'a') === 1
- * countOccurrences('abc', 'd') === 0
- * countOccurrences('ABC', 'a') === 1
- *
- * @param {string} phrase
- * @param {string} letter
- *
- * @return {number}
- *
- */
 function countOccurrences(phrase, letter) {
-  // write code here
+  let newPharse = phrase.toLowerCase();
+  const newLetter = letter.toLowerCase();
+  let sum = 0;
+  for (let i = 0; i < newPharse.length; i++) {
+    const index = newPharse.indexOf(newLetter);
+    if (index >= 0) {
+      newPharse = newPharse.slice(index + 1);
+      sum++;
+    }
+  }
+  return sum;
 }
 
-module.exports = countOccurrences;
+countOccurrences('letter', 't');
+countOccurrences('abc', 'a');
+countOccurrences('abc', 'd');
+countOccurrences('ABC', 'a');
