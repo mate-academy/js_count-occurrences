@@ -18,9 +18,9 @@
  *
  */
 function countOccurrences(phrase, letter) {
-  const phraseArr = phrase.toLowerCase().split('');
+  const phraseLetters = phrase.toLowerCase().split('');
 
-  return phraseArr.filter(el => el === letter).length;
+  return phraseLetters.filter(el => el === letter).length;
 }
 
 module.exports = countOccurrences;
