@@ -18,13 +18,13 @@
  *
  */
 function countOccurrences(phrase, letter) {
-  const arr = phrase.toLowerCase().split('');
+  const phraseArr = phrase.toLowerCase().split('');
 
-  if (arr.length === 0) {
+  if (phraseArr.length === 0) {
     return 0;
   }
 
-  return arr.filter(el => el === letter).length;
+  return phraseArr.filter(el => el === letter).length;
 }
 
 module.exports = countOccurrences;
