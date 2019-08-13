@@ -20,10 +20,6 @@
 function countOccurrences(phrase, letter) {
   const phraseArr = phrase.toLowerCase().split('');
 
-  if (phraseArr.length === 0) {
-    return 0;
-  }
-
   return phraseArr.filter(el => el === letter).length;
 }
 
