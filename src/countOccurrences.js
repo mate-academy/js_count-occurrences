@@ -20,11 +20,12 @@
 function countOccurrences(phrase, letter) {
   let countLetter = 0;
   let startPossition = 0;
-  let foundPossition;
+  let foundPossition = 0;
 
   while (true) {
-    foundPossition
-    = phrase.toLowerCase().indexOf(letter.toLowerCase(), startPossition);
+    foundPossition = phrase
+      .toLowerCase()
+      .indexOf(letter.toLowerCase(), startPossition);
 
     if (foundPossition === -1) {
       break;
