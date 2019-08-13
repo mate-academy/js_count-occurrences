@@ -25,7 +25,9 @@ function countOccurrences(phrase, letter) {
     if (phraseToLower.charAt(i) === letter) {
       count++;
     };
-  } return count;
+  }
+
+  return count;
 }
 
 module.exports = countOccurrences;
