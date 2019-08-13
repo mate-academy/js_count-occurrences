@@ -18,7 +18,19 @@
  *
  */
 function countOccurrences(phrase, letter) {
-  // write code here
+  let sumWordCoincidence = 0;
+  let tempStr = '';
+  if (letter.toLowerCase() === letter) {
+    tempStr = phrase.toLowerCase();
+  } else {
+    tempStr = phrase.toUpperCase();
+  }
+  for (const char of tempStr) {
+    if (char === letter) {
+      sumWordCoincidence++;
+    }
+  }
+  return sumWordCoincidence;
 }
 
 module.exports = countOccurrences;
