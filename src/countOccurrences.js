@@ -20,9 +20,10 @@
 function countOccurrences(phrase, letter) {
   let counter = 0;
   const lowerPhrase = phrase.toLowerCase();
+  const lowerLetter = letter.toLowerCase();
 
   for (let i = 0; i < lowerPhrase.length; i++) {
-    if (lowerPhrase[i] === letter) {
+    if (lowerPhrase[i] === lowerLetter) {
       counter += 1;
     }
   }
