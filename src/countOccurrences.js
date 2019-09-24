@@ -21,13 +21,13 @@ function countOccurrences(phrase, letter) {
   // write code here
   const str = phrase.toLowerCase();
   const newLetter = letter.toLowerCase();
-  let total = '';
+  let counter = '';
   for (let i = 0; i < str.length; i++) {
     if (str[i] === newLetter) {
-      total += newLetter;
+      counter += newLetter;
     }
   }
-  return total.length;
+  return counter.length;
 }
 
 module.exports = countOccurrences;
