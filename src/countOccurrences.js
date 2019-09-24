@@ -22,6 +22,7 @@ function countOccurrences(phrase, letter) {
   const result = [];
   const arrPhrase = phrase.toLowerCase().split('');
   const lowerLetter = letter.toLowerCase();
+
   for (let i = 0; i < arrPhrase.length; i++) {
     if (arrPhrase[i].includes(lowerLetter)) {
       result.push(arrPhrase[i]);
