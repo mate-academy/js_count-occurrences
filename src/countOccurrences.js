@@ -19,9 +19,8 @@
  */
 function countOccurrences(phrase, letter) {
   let count = 0;
-  const lowCaseStr = phrase.toLowerCase();
+  const lowCaseStr = phrase.toLowerCase().split(“”);
   const lowCaseLetter = letter.toLowerCase();
-  lowCaseStr.split('');
 
   for (let i = 0; i < lowCaseStr.length; i++) {
     if (lowCaseStr[i] === lowCaseLetter) {
