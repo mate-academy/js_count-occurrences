@@ -19,9 +19,11 @@
  */
 function countOccurrences(phrase, letter) {
   let count = 0;
+  const normalizedLetter = letter.toUpperCase();
+  const normalizedPhrase = phrase.toUpperCase();
 
   for (let i = 0; i < phrase.length; i++) {
-    if (phrase[i].toUpperCase() === letter.toUpperCase()) {
+    if (normalizedPhrase[i] === normalizedLetter) {
       count++;
     }
   }
