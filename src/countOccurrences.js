@@ -21,15 +21,15 @@ function countOccurrences(phrase, letter) {
   // write code here
 
   let count = 0;
+  const phraseUp = phrase.toLocaleUpperCase();
+  const letterUp = letter.toLocaleUpperCase();
 
-  // let text = phrase.toLocaleLowerCase();
-  // let t = letter.toLocaleLowerCase();
-
-  for (let i = 0; i < phrase.length; i++) {
-    if (phrase[i].toLocaleLowerCase() === letter.toLocaleLowerCase()) {
+  for (let i = 0; i < phraseUp.length; i++) {
+    if (phraseUp[i] === letterUp) {
       count++;
     }
   }
+
   return count;
 }
 
