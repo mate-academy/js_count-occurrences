@@ -19,7 +19,7 @@
  */
 function countOccurrences(phrase, letter) {
   return phrase.toLowerCase().split('').filter(
-    element => element === letter.toLowerCase()
+    char => char === letter.toLowerCase()
   ).length;
 }
 
