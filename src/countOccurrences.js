@@ -20,11 +20,7 @@
 function countOccurrences(phrase, letter) {
   const reg = new RegExp(letter, 'gi');
   const coinsidenceArr = phrase.match(reg);
-
-  if (coinsidenceArr == null) {
-    return 0;
-  }
-  return coinsidenceArr.length;
+  return coinsidenceArr ? coinsidenceArr.length : 0;
 }
 
 module.exports = countOccurrences;
