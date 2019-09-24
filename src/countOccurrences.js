@@ -25,6 +25,7 @@ function countOccurrences(phrase, letter) {
       count++;
     }
   }
+
   return count;
 }
 
