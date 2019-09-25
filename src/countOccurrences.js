@@ -18,7 +18,6 @@
  *
  */
 function countOccurrences(phrase, letter) {
-  // write code here
   let count = 0;
   const phraseLatters = phrase.toLowerCase().split('');
   const letterLowCase = letter.toLowerCase();
