@@ -19,10 +19,12 @@
  */
 function countOccurrences(phrase, letter) {
   let counter = 0;
+  const lowerPhrase = phrase.toLowerCase()
+
   for (let i = 0; i < phrase.length; i++) {
-    // eslint-disable-next-line eqeqeq
-    if (phrase[i].toLowerCase() === letter) { counter++; }
+    if (lowerPhrase[i] === letter) { counter++; }
   }
+
   return counter;
 }
 
