@@ -18,7 +18,9 @@
  *
  */
 function countOccurrences(phrase, letter) {
-  // write code here
+  return [...phrase.toLowerCase()]
+    .reduce((a, b) =>  // eslint-disable-line
+      (a[b] = (a[b] || 0) + 1, a), {})[letter.toLowerCase()] || 0; // eslint-disable-line
 }
 
 module.exports = countOccurrences;
