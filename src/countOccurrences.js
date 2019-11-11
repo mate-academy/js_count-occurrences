@@ -19,13 +19,14 @@
  */
 function countOccurrences(phrase, letter) {
   let counter = 0;
+  const normalizedLetter = letter.toLowerCase();
+  const normalizedPrase = phrase.toLowerCase();
 
-  for (let i = 0; i < phrase.length; i++) {
-    if (phrase === '') {
+  for (let i = 0; i < normalizedPrase.length; i++) {
+    if (normalizedPrase === '') {
       return 0;
     }
-    if (phrase.charAt(i) === letter.toLocaleLowerCase()
-      || phrase.charAt(i) === letter.toUpperCase()) {
+    if (normalizedPrase.charAt(i) === normalizedLetter) {
       counter++;
     }
   }
