@@ -18,7 +18,9 @@
  *
  */
 function countOccurrences(phrase, letter) {
-  // write code here
+  const reg = RegExp('[' + letter + ']', 'ig');
+  const numberOfRepeats = phrase.match(reg);
+  return numberOfRepeats === null ? 0 : numberOfRepeats.length;
 }
 
 module.exports = countOccurrences;
