@@ -18,7 +18,7 @@
  *
  */
 function countOccurrences(phrase, letter) {
-  // write code here
+  return (phrase.split(new RegExp(letter, 'i')).length - 1);
 }
 
 module.exports = countOccurrences;
