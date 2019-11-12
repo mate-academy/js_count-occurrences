@@ -21,7 +21,7 @@ function countOccurrences(phrase, letter) {
   return phrase
     .toLowerCase()
     .split('')
-    .filter((x) => { return letter === x; })
+    .filter(elementOfPhrase => letter === elementOfPhrase)
     .length;
 }
 
