@@ -18,12 +18,12 @@
  *
  */
 function countOccurrences(phrase, letter) {
-  const regExp = new RegExp(letter, "g");
-  phrase = phrase.toLowerCase().match(regExp);
-  if (phrase === null) {
+  const regExp = new RegExp(letter, 'g');
+  const newPhrase = phrase.toLowerCase().match(regExp);
+  if (newPhrase === null) {
     return 0;
   } else {
-    return phrase.length;
+    return newPhrase.length;
   }
 }
 
