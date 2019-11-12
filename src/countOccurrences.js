@@ -18,16 +18,16 @@
  *
  */
 function countOccurrences(phrase, letter) {
-  const phraseLC = phrase.toLocaleLowerCase();
-  const letterLC = letter.toLocaleLowerCase();
-  let number = 0;
+  const phraseLowerCase = phrase.toLocaleLowerCase();
+  const letterLowerCase = letter.toLocaleLowerCase();
+  let counter = 0;
 
-  for (let i = 0; i < phraseLC.length; i++) {
-    if (phraseLC[i] === letterLC[0]) {
-      number++;
+  for (let i = 0; i < phraseLowerCase.length; i++) {
+    if (phraseLowerCase[i] === letterLowerCase[0]) {
+      counter++;
     }
   }
-  return number;
+  return counter;
 }
 
 module.exports = countOccurrences;
