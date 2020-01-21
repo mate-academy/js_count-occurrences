@@ -18,15 +18,15 @@
  *
  */
 function countOccurrences(phrase, letter) {
-  let count = 0;
+  let counter = 0;
 
-  phrase.split('').map(elem => {
-    if (elem.toLowerCase() === letter.toLowerCase()) {
-      count++;
+  phrase.split('').map(symbol => {
+    if (symbol.toLowerCase() === letter.toLowerCase()) {
+      counter++;
     }
   });
 
-  return count;
+  return counter;
 }
 
 module.exports = countOccurrences;
