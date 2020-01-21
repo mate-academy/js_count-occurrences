@@ -24,7 +24,7 @@ function countOccurrences(phrase, letter) {
   let letterCount = 0;
 
   for (let i = 0; i < phrase.length; i++) {
-    if (phraseLower.charAt(i) === letterLower) {
+    if (phraseLower[i] === letterLower) {
       letterCount += 1;
     }
   }
