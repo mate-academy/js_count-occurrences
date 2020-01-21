@@ -17,12 +17,13 @@
  * @return {number}
  *
  */
-function countOccurrences(phrase, letter) {
-  const res = phrase.toLowerCase()
-    .split('')
-    .filter(item => item === letter.toLowerCase());
 
-  return res.length;
+function countOccurrences(phrase, letter) {
+  const phraseLowerCase = phrase.toLowerCase();
+  const letterLowerCase = letter.toLowerCase();
+
+  return phraseLowerCase.split('')
+    .filter(item => item === letterLowerCase).length;
 }
 
 module.exports = countOccurrences;
