@@ -22,13 +22,9 @@ function countOccurrences(phrase, letter) {
 
   const checkPhrase = phrase.toLowerCase();
 
-  if (!checkPhrase.includes(letter)) {
-    count = 0;
-  } else {
-    for (let i = 0; i <= checkPhrase.length; i++) {
-      if (checkPhrase[i] === letter) {
-        count++;
-      }
+  for (let i = 0; i <= checkPhrase.length; i++) {
+    if (checkPhrase[i] === letter) {
+      count++;
     }
   }
 
