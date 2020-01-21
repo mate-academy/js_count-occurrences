@@ -18,9 +18,11 @@
  *
  */
 function countOccurrences(phrase, letter) {
-  const arr = phrase.split('');
+  const upperCaseArr = phrase.toUpperCase().split('');
 
-  return arr.filter(e => e === letter || e === letter.toUpperCase()).length;
+  const upperCaseLetter = letter.toUpperCase();
+
+  return upperCaseArr.filter(e => e === upperCaseLetter).length;
 }
 
 module.exports = countOccurrences;
