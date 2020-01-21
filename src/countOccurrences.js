@@ -18,11 +18,12 @@
  *
  */
 function countOccurrences(phrase, letter) {
-  const phraseArray = phrase.split('');
   let counter = 0;
 
-  for (let i = 0; i < phraseArray.length; i++) {
-    if (phraseArray[i].toLowerCase() === letter.toLowerCase()) {
+  letter.toLowerCase();
+
+  for (let i = 0; i < phrase.length; i++) {
+    if (phrase[i].toLowerCase() === letter) {
       counter++;
     }
   }
