@@ -21,12 +21,16 @@ function countOccurrences(phrase, letter) {
   const letterLowerCase = letter.toLowerCase();
   const phraseLowerCase = phrase.toLowerCase();
   let count = 0;
-  let positionSimbol = 0;
+  let positionSymbol = 0;
+  let foundPosition;
 
-  while (phraseLowerCase.indexOf(letterLowerCase, positionSimbol) !== -1) {
-    const foundPos = phraseLowerCase.indexOf(letterLowerCase, positionSimbol);
+  while (true) {
+    foundPosition = phraseLowerCase.indexOf(letterLowerCase, positionSymbol);
 
-    positionSimbol = foundPos + 1;
+    if (foundPosition === -1) {
+      break;
+    }
+    positionSymbol = foundPosition + 1;
     count++;
   }
 
