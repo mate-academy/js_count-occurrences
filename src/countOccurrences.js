@@ -18,7 +18,15 @@
  *
  */
 function countOccurrences(phrase, letter) {
-  // write code here
+  let counter = 0;
+
+  phrase.replace(RegExp(letter, 'ig'), () => {
+    counter++;
+
+    return '';
+  });
+
+  return counter;
 }
 
 module.exports = countOccurrences;
