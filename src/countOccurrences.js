@@ -18,7 +18,18 @@
  *
  */
 function countOccurrences(phrase, letter) {
-  // write code here
+  let numClone = 0;
+  /* Кошмар забыл поставить круглые скобки в toLowerCase(),
+   * дебаг не фурычит и lint не показывал ошибку =)
+   */
+
+  for (let section = 0; section <= phrase.length - 1; section++) {
+    if (phrase[section].toLowerCase() === letter) {
+      numClone++;
+    }
+  }
+
+  return numClone;
 }
 
 module.exports = countOccurrences;
