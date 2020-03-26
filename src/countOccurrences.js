@@ -20,19 +20,15 @@
 function countOccurrences(phrase, letter) {
   let arr = [];
   // eslint-disable-next-line no-unused-vars
-  let counter = 0;
+  let results = [];
+  // eslint-disable-next-line no-unused-vars
   const newphrase = phrase.toLowerCase();
 
   arr = newphrase.split('');
 
-  for (let i = 0; i < arr.length; i++) {
-    // eslint-disable-next-line eqeqeq
-    if (arr[i] == letter) {
-      counter++;
-    }
-  }
+  results = arr.filter(word => word === letter);
 
-  return counter;
+  return results.length;
 }
 
 module.exports = countOccurrences;
