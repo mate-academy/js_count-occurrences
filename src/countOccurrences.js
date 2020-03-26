@@ -18,17 +18,16 @@
  *
  */
 function countOccurrences(phrase, letter) {
-  let arr = [];
-  // eslint-disable-next-line no-unused-vars
-  let results = [];
-  // eslint-disable-next-line no-unused-vars
-  const newphrase = phrase.toLowerCase();
+  let count = 0;
+  const lowerCase = phrase.toLowerCase();
 
-  arr = newphrase.split('');
+  for (let i = 0; i < lowerCase.length; i++) {
+    if (lowerCase.charAt(i) === letter) {
+      count++;
+    }
+  }
 
-  results = arr.filter(word => word === letter);
-
-  return results.length;
+  return count;
 }
 
 module.exports = countOccurrences;
