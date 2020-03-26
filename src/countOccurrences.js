@@ -18,7 +18,10 @@
  *
  */
 function countOccurrences(phrase, letter) {
-  // write code here
+  const regExp = new RegExp(letter, 'g');
+  const newPhrase = phrase.toLowerCase().match(regExp);
+
+  return newPhrase === null ? 0 : newPhrase.length;
 }
 
 module.exports = countOccurrences;
