@@ -18,7 +18,7 @@ test('Should work for big and small letters in phrase', () => {
 });
 
 test('Should work for a big letter', () => {
-  expect(countOccurrences('Abrakadabra', 'A'))
+  expect(countOccurrences('Abracadabra', 'A'))
     .toBe(5);
 });
 
