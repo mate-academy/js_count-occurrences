@@ -21,8 +21,6 @@ function countOccurrences(phrase, letter) {
   const array = phrase.toUpperCase();
   const char = letter.toUpperCase();
 
-  array.split('');
-
   if (array.length === 0) {
     return 0;
   }
