@@ -19,6 +19,20 @@
  */
 function countOccurrences(phrase, letter) {
   // write code here
+  if (!phrase) {
+    return 0;
+  }
+
+  const lowerCasePhrase = phrase.toLowerCase();
+  const lowerCaseLetter = letter.toLowerCase();
+
+  const hashMap = [...Array(256)].fill(0);
+
+  for (const item of lowerCasePhrase) {
+    hashMap[item.charCodeAt(0)]++;
+  }
+
+  return hashMap[lowerCaseLetter.charCodeAt(0)];
 }
 
 module.exports = countOccurrences;
