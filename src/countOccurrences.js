@@ -18,7 +18,18 @@
  *
  */
 function countOccurrences(phrase, letter) {
-  // write code here
+  // eslint-disable-next-line no-param-reassign
+  phrase = phrase.toLowerCase();
+
+  let flag = 0;
+
+  for (let i = 0; i < phrase.length; i++) {
+    if (phrase[i] === letter) {
+      flag++;
+    }
+  }
+
+  return flag;
 }
 
 module.exports = countOccurrences;
