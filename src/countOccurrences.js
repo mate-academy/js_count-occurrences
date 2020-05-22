@@ -18,17 +18,17 @@
  *
  */
 function countOccurrences(phrase, letter) {
-  const array = phrase.toUpperCase();
+  const words = phrase.toUpperCase();
   const char = letter.toUpperCase();
 
-  if (array.length === 0) {
+  if (words.length === 0) {
     return 0;
   }
 
   let count = 0;
 
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] === char) {
+  for (let i = 0; i < words.length; i++) {
+    if (words[i] === char) {
       count++;
     }
   }
