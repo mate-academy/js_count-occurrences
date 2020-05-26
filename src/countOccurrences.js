@@ -18,7 +18,10 @@
  *
  */
 function countOccurrences(phrase, letter) {
-  return phrase.split('').filter(char => char.toLowerCase() === letter.toLowerCase()).length;
+  // return phrase.split('').filter(char => char.toLowerCase() === letter.toLowerCase()).length;
+  const matchesAmount = phrase.match(new RegExp(letter, 'gi'));
+
+  return matchesAmount !== null ? matchesAmount.length : 0;
 }
 
 module.exports = countOccurrences;
