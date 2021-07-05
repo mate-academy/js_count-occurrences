@@ -18,7 +18,10 @@
  *
  */
 function countOccurrences(phrase, letter) {
-  // write code here
+  let regex = new RegExp(letter, "ig");
+  let mactches =  phrase.match(regex) || [];
+  return mactches.length;
 }
+
 
 module.exports = countOccurrences;
