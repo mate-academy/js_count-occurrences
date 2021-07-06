@@ -11,14 +11,22 @@
  * countOccurrences('abc', 'd') === 0
  * countOccurrences('ABC', 'a') === 1
  *
- * @param {string} phrase
- * @param {string} letter
+ * @param {string} phrase;
+ * @param {string} letter;
  *
  * @return {number}
  *
  */
 function countOccurrences(phrase, letter) {
-  // write code here
+  let counter = 0;
+
+  for (let i = 0; i < phrase.length; i++) {
+    if (letter.toLowerCase() === phrase[i].toLowerCase()) {
+      counter++;
+    }
+  }
+
+  return counter;
 }
 
 module.exports = countOccurrences;
