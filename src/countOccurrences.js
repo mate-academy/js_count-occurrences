@@ -1,6 +1,6 @@
 'use strict';
 
-/**
+/*
  * Implement countOccurrences function:
  *
  * It takes a phrase and a letter and calculates the number of times
@@ -18,7 +18,15 @@
  *
  */
 function countOccurrences(phrase, letter) {
-  // write code here
+  const phraseLowerCase = phrase.toLowerCase();
+  const letterLowerCase = letter.toLowerCase();
+  let count = 0;
+  for (let i = 0; i < phrase.length; i++) {
+    if (phraseLowerCase[i] === letterLowerCase) {
+      count++;
+    }
+  }
+  return count;
 }
 
 module.exports = countOccurrences;
