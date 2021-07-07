@@ -17,8 +17,17 @@
  * @return {number}
  *
  */
+countOccurrences('addd', 'df');
 function countOccurrences(phrase, letter) {
-  // write code here
+  let count = 0;
+  const phraseLower = phrase.toLowerCase();
+  const phraseLength = phraseLower.length;
+  for (let i = 0; i < phraseLength; i++) {
+    if (phraseLower[i] === letter) {
+      count++;
+    }
+  }
+  return count;
 }
 
 module.exports = countOccurrences;
