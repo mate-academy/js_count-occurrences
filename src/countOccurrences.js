@@ -18,7 +18,16 @@
  *
  */
 function countOccurrences(phrase, letter) {
-  // write code here
+  let count = 0;
+  const letterLower = letter.toLowerCase().replace(/\s/g, '');
+  const phraseData = phrase.toLowerCase().split('');
+  for (let i = 0; phrase.length > i; i++) {
+    if (phraseData[i].includes(letterLower)) {
+      count++;
+      delete phraseData[i];
+    }
+  }
+  return count;
 }
 
 module.exports = countOccurrences;
