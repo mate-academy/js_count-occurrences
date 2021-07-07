@@ -18,7 +18,10 @@
  *
  */
 function countOccurrences(phrase, letter) {
-  // write code here
+  const reg = new RegExp(letter, 'gi');
+  const coincidenceArr = phrase.match(reg);
+
+  return coincidenceArr ? coincidenceArr.length : 0;
 }
 
 module.exports = countOccurrences;
