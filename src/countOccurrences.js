@@ -22,8 +22,8 @@ function countOccurrences(phrase, letter) {
   const letterSmall = letter.toLowerCase();
   const phraseSmall = phrase.toLowerCase();
 
-  for (const char of phraseSmall) {
-    if (letterSmall === char) {
+  for (const character of phraseSmall) {
+    if (letterSmall === character) {
       count++;
     }
   }
