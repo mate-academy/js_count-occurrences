@@ -18,7 +18,11 @@
  *
  */
 function countOccurrences(phrase, letter) {
-  // write code here
+  const re = RegExp(letter, 'ig');
+  if (phrase.indexOf(letter) !== -1) {
+    return (phrase.toLowerCase().match(re || [])).length;
+  }
+  return 0;
 }
 
 module.exports = countOccurrences;
