@@ -19,6 +19,17 @@
  */
 function countOccurrences(phrase, letter) {
   // write code here
+  let count = 0;
+  const letterSmall = letter.toLowerCase();
+  const phraseSmall = phrase.toLowerCase();
+
+  for (const char of phraseSmall) {
+    if (char === letterSmall) {
+      count++;
+    }
+  }
+
+  return count;
 }
 
 module.exports = countOccurrences;
